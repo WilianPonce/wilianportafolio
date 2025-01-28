@@ -346,7 +346,7 @@
           <div class="row portfolio-container">
               <div class="col-lg-4 col-md-6 mb-4 portfolio-item" :class ="p.tag" v-for="(p, i) in portafolio" :key="i">
                   <div class="position-relative overflow-hidden mb-2">
-                      <img class="img-fluid rounded w-100" :src="'/img/folder/' + p.img" alt="p.url">
+                      <img class="img-fluid rounded w-100" :src="'/wilianportafolio/img/folder/' + p.img" alt="p.url">
                         <a :href="p.link" @click.prevent="link(p.link)" class="portfolio-btn bg-primary d-flex align-items-center justify-content-center" style="color: #fff;text-decoration: none;">
                             {{ p.text }}
                         </a>
