@@ -29,7 +29,7 @@
                   <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
                   <div class="typed-text d-none">Desarrollador Full Stack con experiencia en diseño y optimización de aplicaciones web</div>
                   <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                      <a href="" class="btn btn-outline-light mr-5">Descarga mi CV</a>
+                      <a href="#" @click="downloadPdf" class="btn btn-outline-light mr-5">Descarga mi CV</a>
                   </div>
               </div>
           </div>
@@ -514,4 +514,14 @@
             form.value = { name: '', email: '', message: '' };
         }
     };
+
+    const downloadPdf = () =>{
+      const pdfUrl = 'https://wilianponce.github.io/wilianportafolio/cv.pdf';
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = 'archivo.pdf';
+      link.click();
+
+      toast.success("Hoja de vida descargada", {timeout: 3000});
+    }
 </script>
